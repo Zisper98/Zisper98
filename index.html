@@ -17,7 +17,30 @@
     <p><span>Need help?</span> call us <span class="number">+265992272058 | +265889612323</span></span></p>
  <img src="Nyasawaves.png" width="100%"><img>
  <marquee behavior="scroll" direction="left">This is <b>Nyasa-Waves</b> the Home of all Malawian radio Stations.........To advertise please contact 0889 612 323 / 0992 272 058</marquee>
- <img src="images/advertise here.png" width="100%"><img>
+ 
+ <div>
+			
+  <a class="mySlides"  href="https://www.reflopictures.co.za/news-updates/"><img src="images/reflozine.png" width="100%"></a>
+  <a class="mySlides"  href="https://web.facebook.com/reflopictures"><img src="images/reflodio.png" width="100%"></a>
+  
+</div>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+  x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 3000); // Change image every 3 seconds
+}
+</script>
  <main>
      <!-- Start DEMO HTML (Use the following code into your project)-->
  <div class="simple-audio-player" id="simp" data-config='{"shide_top":false,"shide_btm":false,"auto_load":false}'>
