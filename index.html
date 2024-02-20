@@ -1,28 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="author" content="CodeHim">
-    <title>Nyasa-Waves</title>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mdzukulu Television</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<style>
+    body {
+        font-family: 'Roboto', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f8f9fa;
+    }
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #343a40;
+        color: #fff;
+        padding: 0% 0;
+        text-align: center;
+        z-index: 999; /* Ensure header is on top */
+    }
+    .container {
+        max-width: 600px;
+        padding: 0px;
+        text-align: center;
+        margin: 0 auto;
+        margin-top: 80px; /* Adjust based on header height */
+    }
+    h1 {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+    .logo {
+        width: 50%;
+        max-width: 200px;
+        margin-bottom: 6px;
+    }
+    .button-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 2px;
+        margin-top: 5px; /* Adjust top margin to make space for the header */
+    }
+    .button {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 2px;
+        border-radius: 10px;
+        background-color: #007bff; /* Default background color */
+        color: #fff;
+        text-decoration: none;
+        font-size: 18px;
+        transition: background-color 0.3s ease;
+        z-index: 1; /* Ensure buttons are below the iframe */
+        position: relative;
+    }
+    .button:hover {
+        background-color: #7fb6f1;
+    }
+    .button i {
+        font-size: 24px;
+        margin-bottom: 0%; /* Reduce margin */
+    }
+    .button-tv {
+        background-color: orange; /* TV button background color */
+    }
+    .button-youtube {
+        background-color: red; /* YouTube button background color */
+    }
+    .footer {
+        background-color: #343a40;
+        color: #fff;
+        padding: 0% 0;
+        text-align: center;
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        z-index: 999; /* Ensure footer is on top */
+    }
+    /* New styles for the live TV button */
+    #liveTvButton {
+        display: inline-block;
+        padding: 0% 20px;
+        background-color: green; /* Change to your preferred color */
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+        z-index: 1; /* Ensure button is below the iframe */
+        position: relative;
+    }
+    #liveTvButton:hover {
+        background-color: darkgreen; /* Darken on hover */
+    }
+
+    .home-button {
+        position: fixed;
+        top: 665px;
+        left: 370px;
+        z-index: 9999;
+        color: #2c2b2b;
+        text-decoration: none;
+        font-size: 40px;
+    }
     
-    <!-- Style CSS -->
-    <link rel="stylesheet" href="css/style.css">
-	<!-- Demo CSS (No need to include it into your project) -->
-	<link rel="stylesheet" href="css/demo.css">
-  
-  </head>
+</style>
+ <!-- Style CSS -->
+ <link rel="stylesheet" href="css/style.css">
+ <!-- Demo CSS (No need to include it into your project) -->
+ <link rel="stylesheet" href="css/demo.css">
+</head>
+<body>
+<div class="header">
+    <h1>Mdzukulu Television</h1>
+</div>
   <body>
     
     <p><span>Need help?</span> call us <span class="number">+265992272058 | +265889612323</span></span></p>
- <img src="Nyasawaves.png" width="100%"><img>
- <marquee behavior="scroll" direction="left">This is <b>Nyasa-Waves</b> the Home of all Malawian radio Stations.........To advertise please contact 0889 612 323 / 0992 272 058</marquee>
+ 
+ <marquee behavior="scroll" direction="left">This is <b>Mdzukulu</b> the Home of all Malawian radio Stations.........To advertise please contact +2760 232 9014</marquee>
  
  <div>
 			
   <a class="mySlides"  href="https://www.reflopictures.co.za/news-updates/"><img src="images/reflozine.png" width="100%"></a>
   <a class="mySlides"  href="https://web.facebook.com/reflopictures"><img src="images/reflodio2.png" width="100%"></a>
   
+ 
 </div>
 
 <script>
@@ -94,13 +207,15 @@ function carousel() {
   </div>
   <div class="simp-footer"><a href="https://bit.ly/sekedus" target="_blank" title="Sekedus">contact us on +265 889 612 323</a></div>
 </div> 
-<img src="images/advertise here.png" width="100%"><img>   
+
      <!-- END EDMO HTML (Happy Coding!)-->
  </main>
- 
-      
-  <footer class="credit">Designed by Shepherd Zisper Phiri</footer>
-  
+ <a href="index.html" class="home-button"><i class="fas fa-home"></i></a>
+<div class="footer">
+    <p>&copy; 2024 Mdzukulu Tv<br>Developed by Shepherd Zisper Phiri.</p>
+</div>
+</body>
+</html>
 <!-- Audio Player JS -->
 <script  src="./js/script.js"></script>
       
