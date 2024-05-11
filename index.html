@@ -1,217 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mvangeli Online</title>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-<style>
-    body {
-        font-family: 'Roboto', sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #f8f9fa;
-    }
-    .header {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        background-color: #343a40;
-        color: #fff;
-        padding: 0% 0;
-        text-align: center;
-        z-index: 999; /* Ensure header is on top */
-    }
-    .container {
-        max-width: 600px;
-        padding: 0px;
-        text-align: center;
-        margin: 0 auto;
-        margin-top: 80px; /* Adjust based on header height */
-    }
-    h1 {
-        font-size: 28px;
-        margin-bottom: 20px;
-    }
-    .logo {
-        width: 50%;
-        max-width: 200px;
-        margin-bottom: 6px;
-    }
-    .button-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-gap: 2px;
-        margin-top: 5px; /* Adjust top margin to make space for the header */
-    }
-    .button {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        padding: 2px;
-        border-radius: 10px;
-        background-color: #007bff; /* Default background color */
-        color: #fff;
-        text-decoration: none;
-        font-size: 18px;
-        transition: background-color 0.3s ease;
-        z-index: 1; /* Ensure buttons are below the iframe */
-        position: relative;
-    }
-    .button:hover {
-        background-color: #7fb6f1;
-    }
-    .button i {
-        font-size: 24px;
-        margin-bottom: 0%; /* Reduce margin */
-    }
-    .button-tv {
-        background-color: orange; /* TV button background color */
-    }
-    .button-youtube {
-        background-color: red; /* YouTube button background color */
-    }
-    .footer {
-        background-color: #343a40;
-        color: #fff;
-        padding: 0% 0;
-        text-align: center;
-        width: 100%;
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        z-index: 999; /* Ensure footer is on top */
-    }
-    /* New styles for the live TV button */
-    #liveTvButton {
-        display: inline-block;
-        padding: 0% 20px;
-        background-color: green; /* Change to your preferred color */
-        color: #fff;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        font-size: 16px;
-        transition: background-color 0.3s ease;
-        z-index: 1; /* Ensure button is below the iframe */
-        position: relative;
-    }
-    #liveTvButton:hover {
-        background-color: darkgreen; /* Darken on hover */
-    }
-
-    .home-button {
-        position: fixed;
-        top: 665px;
-        left: 370px;
-        z-index: 9999;
-        color: #2c2b2b;
-        text-decoration: none;
-        font-size: 40px;
-    }
-    
-</style>
- <!-- Style CSS -->
- <link rel="stylesheet" href="css/style.css">
- <!-- Demo CSS (No need to include it into your project) -->
- <link rel="stylesheet" href="css/demo.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mvangeli Online</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css"> <!-- Style CSS -->
+    <link rel="stylesheet" href="css/demo.css"> <!-- Demo CSS (No need to include it into your project) -->
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+        .header, .footer {
+            position: fixed;
+            width: 100%;
+            background-color: #343a40;
+            color: #fff;
+            padding: 0;
+            text-align: center;
+            z-index: 999; /* Ensure header and footer are on top */
+        }
+        .header {
+            top: 0;
+        }
+        .footer {
+            bottom: 0;
+        }
+        .container {
+            max-width: 600px;
+            padding: 0;
+            text-align: center;
+            margin: 0 auto;
+            margin-top: 80px; /* Adjust based on header height */
+            margin-bottom: 150px; /* Adjust based on footer height */
+        }
+        h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+        .logo {
+            width: 50%;
+            max-width: 200px;
+            margin-bottom: 6px;
+        }
+        .button-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 2px;
+            margin-top: 5px; /* Adjust top margin to make space for the header */
+        }
+        .button {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            padding: 2px;
+            border-radius: 10px;
+            background-color: #007bff; /* Default background color */
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+            z-index: 1; /* Ensure buttons are below the iframe */
+            position: relative;
+        }
+        .button:hover {
+            background-color: #7fb6f1;
+        }
+        .button i {
+            font-size: 24px;
+            margin-bottom: 0%; /* Reduce margin */
+        }
+        .button-tv {
+            background-color: orange; /* TV button background color */
+        }
+        .button-youtube {
+            background-color: red; /* YouTube button background color */
+        }
+        /* New styles for the live TV button */
+        #liveTvButton {
+            display: inline-block;
+            padding: 0% 20px;
+            background-color: green; /* Change to your preferred color */
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+            z-index: 1; /* Ensure button is below the iframe */
+            position: relative;
+        }
+        #liveTvButton:hover {
+            background-color: darkgreen; /* Darken on hover */
+        }
+        .home-button {
+            position: fixed;
+            top: 665px;
+            left: 370px;
+            z-index: 9999;
+            color: #2c2b2b;
+            text-decoration: none;
+            font-size: 40px;
+        }
+        /* Styles for the simple audio player */
+        .simple-audio-player {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 90%; /* Adjust width as needed */
+            max-width: 600px; /* Maximum width */
+            background-color: #fff; /* Adjust background color */
+            border-radius: 10px; /* Rounded corners */
+            padding: 10px; /* Add padding */
+            z-index: 1; /* Ensure player is above other content */
+        }
+        .simp-playlist {
+            padding: 0;
+            margin-top: 10px; /* Adjust margin */
+            list-style-type: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Adjust column size */
+            gap: 5px; /* Adjust gap between items */
+        }
+        .simp-playlist li {
+            padding: 2px;
+            border: 1px solid #ddd; /* Add border */
+            text-align: center;
+        }
+        .simp-source, .simp-desc {
+            display: block;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
-<div class="header">
-    <h1>Mdzukulu Television</h1>
-</div>
-  <body>
+    <div class="header">
+        <h1>Mdzukulu Television</h1>
+    </div>
+    <div class="container">
+        <marquee behavior="scroll" direction="left">This is <b>Mvangeli</b>.........For Enquiries please whatsapp +265 986 821 682 +2760 232 9014</marquee>
+    </div>
+
+    <main>
+        <div class="simple-audio-player" id="simp" data-config='{"shide_top":false,"shide_btm":false,"auto_load":false}'>
+            <ul class="simp-playlist">
+                <li><span class="simp-source" data-src="https://exclusive.streamafrica.net/radio/8070/radio.mp3">BEYOND FM</span><span class="simp-desc">Beyond Radio Station</span></li>
+                <li><span class="simp-source" data-src="https://ice31.securenetsystems.net/0079?playSessionID=ACF68F56-2C23-4A68-90D629B5E83DA334">ZBS</span><span class="simp-desc">Zodiak Broadcasting Station</span></li>
+                <li><span class="simp-source" data-src="https://exclusive.streamafrica.net:8350/storyclub" streamtype="mp3">STORY CLUB FM</span><span class="simp-desc">Story Club FM</span></li>
+                <li><span class="simp-source" data-src="https://play.streamafrica.net/crs" streamtype="mp3">CHISOMO RADIO STATION</span><span class="simp-desc">Chisomo Radio Station</span></li>
+                <li><span class="simp-source" data-src="https://play.streamafrica.net/angaliba" streamtype="mp3">ANGALIBA FM</span><span class="simp-desc">Angaliba Fm</span></li>
+                <li><span class="simp-source" data-src="https://exclusive.streamafrica.net:8030/radio.mp3" streamtype="mp3">TIMVENI RADIO</span><span class="simp-desc">Timveni Radio Station</span></li>
+                <li><span class="simp-source" data-src="https://stream.zeno.fm/6x5k18cz4x8uv" streamtype="mp3">UFULU FM</span><span class="simp-desc">Ufulu Fm</span></li>
+                <li><span class="simp-source" data-src="https://play.streamafrica.net/plfm" streamtype="mp3">PL FM</span><span class="simp-desc">Pentecostal Life Fm</span></li>
+                <li><span class="simp-source" data-src="https://play.streamafrica.net/alinafe" streamtype="mp3">RADIO ALINAFE</span><span class="simp-desc">Radio Alinafe</span></li>
+                <li><span class="simp-source" data-src="https://streamdb9web.securenetsystems.net/cirrusencore/TIMESFM" streamtype="mp3">TIMES RADIO</span><span class="simp-desc">Times Radio</span></li>
+                <li><span class="simp-source" data-src="https://play.streamafrica.net/twr" streamtype="mp3">TRANS WORLD RADIO</span><span class="simp-desc">Trans World Radio</span></li>
+            </ul>
+        </div>
+    </main>
+
+    <a href="index.html" class="home-button"><i class="fas fa-home"></i></a>
     
-    <p><span>Need help?</span> call us <span class="number">+265986821682 | +27602329014</span></span></p>
- 
- <marquee behavior="scroll" direction="left">This is <b>Mdzukulu</b> the Home of all Malawian radio Stations.........To advertise please contact +2760 232 9014</marquee>
- 
- 
+    <div class="footer">
+        <p>&copy; 2024 Mvangeli Online<br>Developed by Shepherd Zisper Phiri.</p>
+    </div>
 
-<script>
-var myIndex = 0;
-carousel();
-
-function carousel() {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  for (i = 0; i < x.length; i++) {
-  x[i].style.display = "none";  
-  }
-  myIndex++;
-  if (myIndex > x.length) {myIndex = 1}    
-  x[myIndex-1].style.display = "block";  
-  setTimeout(carousel, 3000); // Change image every 3 seconds
-}
-</script>
- <main>
-     <!-- Start DEMO HTML (Use the following code into your project)-->
- <div class="simple-audio-player" id="simp" data-config='{"shide_top":false,"shide_btm":false,"auto_load":false}'>
-  <div class="simp-playlist">
-    
-    <ul>
-      <li><span class="simp-source" data-src="https://exclusive.streamafrica.net/radio/8070/radio.mp3">BEYOND FM</span><span class="simp-desc">Beyond Radio Station</span></li>
-    </ul>
-
-    <ul>
-      <li><span class="simp-source" data-src="https://ice31.securenetsystems.net/0079?playSessionID=ACF68F56-2C23-4A68-90D629B5E83DA334">ZBS</span><span class="simp-desc">Zodiak Broadcasting Station</span></li>
-    </ul>
-
-    <ul>
-      <li><span class="simp-source" data-src="https://exclusive.streamafrica.net:8350/storyclub" streamtype="mp3">STORY CLUB FM</span><span class="simp-desc">Story Club FM</span></li>
-    </ul>
-
-    <ul>
-      <li><span class="simp-source" data-src="https://play.streamafrica.net/crs" streamtype="mp3">CHISOMO RADIO STATION</span><span class="simp-desc">Chisomo Radio Station</span></li>
-    </ul>
-
-    <ul>
-      <li><span class="simp-source" data-src="https://play.streamafrica.net/angaliba" streamtype="mp3">ANGALIBA FM</span><span class="simp-desc">Angaliba Fm</span></li>
-    </ul>
-
-    <ul>
-      <li><span class="simp-source" data-src="https://exclusive.streamafrica.net:8030/radio.mp3" streamtype="mp3">TIMVENI RADIO</span><span class="simp-desc">Timveni Radio Station</span></li>
-    </ul>
-
-    <ul>
-      <li><span class="simp-source" data-src="https://stream.zeno.fm/6x5k18cz4x8uv" streamtype="mp3">UFULU FM</span><span class="simp-desc">Ufulu Fm</span></li>
-    </ul>
-
-    <ul>
-      <li><span class="simp-source" data-src="https://play.streamafrica.net/plfm" streamtype="mp3">PL FM</span><span class="simp-desc">Pentecostal Life Fm</span></li>
-    </ul>
-
-    <ul>
-      <li><span class="simp-source" data-src="https://play.streamafrica.net/alinafe" streamtype="mp3">RADIO ALINAFE</span><span class="simp-desc">Radio Alinafe</span></li>
-    </ul>
-
-    <ul>
-      <li><span class="simp-source" data-src="https://streamdb9web.securenetsystems.net/cirrusencore/TIMESFM
-        " streamtype="mp3">TIMES RADIO</span><span class="simp-desc">Times Radio</span></li>
-    </ul>
-
-    <ul>
-      <li><span class="simp-source" data-src="https://play.streamafrica.net/twr" streamtype="mp3">TRANS WORLD RADIO</span><span class="simp-desc">Trans World Radio</span></li>
-    </ul>
-    
-  </div>
-  <div class="simp-footer"><a href="https://bit.ly/sekedus" target="_blank" title="Sekedus">contact us on +265 889 612 323</a></div>
-</div> 
-
-     <!-- END EDMO HTML (Happy Coding!)-->
- </main>
- <a href="index.html" class="home-button"><i class="fas fa-home"></i></a>
-<div class="footer">
-    <p>&copy; 2024 Mvangeli Online<br>Developed by Shepherd Zisper Phiri.</p>
-</div>
+    <!-- Audio Player JS -->
+    <script src="./js/script.js"></script>
+    <script>
+        var myIndex = 0;
+        carousel();
+        
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";  
+            }
+            myIndex++;
+            if (myIndex > x.length) {myIndex = 1}    
+            x[myIndex-1].style.display = "block";  
+            setTimeout(carousel, 3000); // Change image every 3 seconds
+        }
+    </script>
 </body>
-</html>
-<!-- Audio Player JS -->
-<script  src="./js/script.js"></script>
-      
-  </body>
 </html>
